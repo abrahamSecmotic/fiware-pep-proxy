@@ -135,6 +135,7 @@ const Root = (function() {
       resource,
       authzforce,
       organizationToken,
+      req.query,
       function(userInfo) {
         setHeaders(req, userInfo);
         if (config.authorization.enabled) {
