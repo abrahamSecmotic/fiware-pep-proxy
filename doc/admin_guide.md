@@ -448,6 +448,7 @@ overrides.
 | PEP_PROXY_CORS_MAX_AGE                | `cors.maxAge`                     |
 | PEP_PROXY_AUTH_FOR_NGINX              | `config.auth_for_nginx`           |
 | PEP_PROXY_MAGIC_KEY                   | `config.magic_key`                |
+| PEP_PROXY_REQUIRED_AUTHORIZATION      | `config.required_authorization`   |
 
 Note:
 

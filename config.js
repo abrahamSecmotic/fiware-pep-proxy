@@ -75,5 +75,6 @@ config.public_paths = [];
 
 config.magic_key = undefined;
 config.auth_for_nginx = false;
+config.required_authorization = true;
 
 module.exports = config;

@@ -26,7 +26,7 @@ const Root = (function() {
       ? req.headers[config.organizations.header]
       : null;
 
-    if (authToken === undefined) {
+    if (authToken === undefined && config.required_authorization) {
       debug('Auth-token not found in request header');
       const authHeader = 'IDM uri = ' + config.idm_host;
       res.set('WWW-Authenticate', authHeader);
