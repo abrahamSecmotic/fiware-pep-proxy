@@ -1,6 +1,6 @@
 {
   "name": "fiware-pep-proxy-iota",
-  "version": "8.1.1",
+  "version": "8.1.2",
   "license": "MIT",
   "description": "PEP oauth2 authentication proxy for FIWARE GE services",
   "author": "GING DIT UPM",
