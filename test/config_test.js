@@ -75,6 +75,8 @@ config.public_paths = to_array(process.env.PEP_PROXY_PUBLIC_PATHS, []);
 
 config.required_authorization = toBoolean(process.env.PEP_PROXY_REQUIRED_AUTHORIZATION, true);
 
+config.cache_time = process.env.PEP_PROXY_CACHE_TIME || 300;
+
 config.magic_key = process.env.PEP_PROXY_MAGIC_KEY || undefined;
 
 module.exports = config;
