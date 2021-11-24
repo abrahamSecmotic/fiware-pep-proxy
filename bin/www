@@ -6,6 +6,7 @@ const cors = require('cors');
 const fs = require('fs');
 const https = require('https');
 const Root = require('../controllers/root').Root;
+const HealthCheck = require('../controllers/healthCheck').HealthCheck;
 const IDM = require('../lib/idm.js').IDM;
 const errorhandler = require('errorhandler');
 
@@ -61,6 +62,7 @@ function start_server() {
     app.all(config.public_paths[p], Root.public);
   }
 
+  app.all('/healthCheck', HealthCheck);
   app.all('/*', Root.pep);
 
   if (config.https.enabled === true) {

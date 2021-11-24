@@ -4,20 +4,12 @@ const http = require('http');
 const config = require('../config');
 const http_code = process.env.HEALTHCHECK_CODE || 200;
 
-function to_array(env, default_value) {
-  return env !== undefined ? env.split(',') : default_value;
-}
-
-const public_paths = to_array(process.env.PEP_PROXY_PUBLIC_PATHS, [
-  '/iot/about',
-]);
-
 const options = {
   host: 'localhost',
   port: process.env.PEP_PROXY_PORT || config.port,
   timeout: 2000,
   method: 'GET',
-  path: public_paths[0] || '/',
+  path: '/healthCheck',
 };
 
 const request = http.request(options, result => {
